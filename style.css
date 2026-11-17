@@ -174,7 +174,7 @@ dialog::backdrop{background:rgba(2,10,11,.85);backdrop-filter:blur(6px)}
 
 /* ===== hero lab layer: real background + real teacher cut-out (no circle mask) ===== */
 #lab{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:var(--bg)}
-#lab .lab-bg{position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;will-change:transform}
+#lab .lab-bg{position:absolute;left:-3%;top:-3%;width:106%;height:106%;filter:blur(9px) brightness(.9);max-width:none;object-fit:cover;object-position:50% 50%;will-change:transform}
 #lab .lab-teacher{position:absolute;right:max(0px,calc(50vw - 860px));bottom:0;height:min(96vh,1100px);width:auto;max-width:none;will-change:transform,opacity;
   filter:brightness(.9) contrast(1.06) saturate(.92) drop-shadow(-14px -6px 40px rgba(71,216,222,.28)) drop-shadow(0 30px 40px rgba(2,10,11,.6));
   -webkit-mask-image:linear-gradient(#000 82%,transparent 100%);mask-image:linear-gradient(#000 82%,transparent 100%)}
