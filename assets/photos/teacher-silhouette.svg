@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 1448" width="1086" height="1448">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d3b38"/><stop offset="1" stop-color="#031615"/>
+    </linearGradient>
+    <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6ff6a"/><stop offset="1" stop-color="#9fd400"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+  </defs>
+  <!-- liquid glow behind the tube -->
+  <circle cx="808" cy="420" r="120" fill="#D2FF24" opacity=".28" filter="url(#soft)"/>
+  <g fill="url(#body)" stroke="#47D8DE" stroke-width="5" stroke-linejoin="round" filter="url(#glow)">
+    <!-- lab coat / torso -->
+    <path d="M150 1448 C160 1080 190 760 300 655 C360 600 430 585 470 575 L615 575 C660 585 720 600 770 640 C800 700 830 760 845 840 C880 1050 915 1250 935 1448 Z"/>
+    <!-- raised arm holding the tube -->
+    <path d="M700 640 C760 600 790 560 800 520 L820 470 C835 455 860 460 862 480 L850 545 C835 620 800 690 770 740 Z"/>
+    <!-- neck -->
+    <path d="M478 470 L478 585 C510 615 575 615 608 585 L608 470 Z"/>
+    <!-- head -->
+    <ellipse cx="543" cy="355" rx="128" ry="150"/>
+  </g>
+  <!-- hair -->
+  <path d="M415 340 C405 225 470 190 545 192 C640 195 685 250 672 350 C650 290 600 262 540 262 C480 262 440 295 415 340 Z" fill="#021110" stroke="#47D8DE" stroke-width="4"/>
+  <!-- safety goggles -->
+  <g fill="none" stroke="#47D8DE" stroke-width="7" opacity=".9">
+    <path d="M420 345 L668 345"/>
+    <rect x="455" y="320" width="78" height="52" rx="22"/><rect x="555" y="320" width="78" height="52" rx="22"/>
+  </g>
+  <!-- coat collar and pocket -->
+  <g fill="none" stroke="#47D8DE" stroke-width="4" opacity=".7">
+    <path d="M470 580 L540 760 L615 580"/><path d="M540 760 L540 1448"/>
+    <path d="M610 900 L720 900 L715 990 L615 990 Z"/>
+    <path d="M640 900 L645 860 M675 900 L675 870" stroke="#D2FF24"/>
+  </g>
+  <!-- test tube -->
+  <g transform="rotate(12 840 400)">
+    <rect x="812" y="250" width="52" height="250" rx="26" fill="rgba(71,216,222,.12)" stroke="#bff6f8" stroke-width="5"/>
+    <path d="M817 380 L859 380 L859 474 A21 21 0 0 1 817 474 Z" fill="url(#liq)"/>
+    <rect x="804" y="240" width="68" height="16" rx="8" fill="#bff6f8"/>
+    <circle cx="835" cy="440" r="6" fill="#fff" opacity=".8"/><circle cx="845" cy="410" r="4" fill="#fff" opacity=".7"/>
+  </g>
+  <!-- hand over tube -->
+  <path d="M808 470 C820 445 860 440 872 462 C880 480 870 505 850 512 C830 515 805 500 808 470 Z" fill="#0d3b38" stroke="#47D8DE" stroke-width="5"/>
+</svg>

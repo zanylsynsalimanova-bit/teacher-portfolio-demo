@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Болашақ химиядан басталады · Портфолио үлгісі</title>
+<meta name="description" content="Химия мұғалімінің 3D портфолио сайтының үлгісі">
+<meta name="theme-color" content="#031615">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/photos/lab-hero-bg.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/photos/teacher-silhouette.svg" type="image/svg+xml">
+<script>
+/* decide mode before first paint: static = reduced motion (WebGL check happens in scene3d.js) */
+(function(){var d=document.documentElement;d.classList.add('js');
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches||/[?&]static\b/.test(location.search))d.classList.add('static');})();
+</script>
+<link rel="stylesheet" href="style.css?v=2">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<a class="skip" href="#about">Мазмұнға өту</a>
+<div id="lab">
+  <img class="lab-bg" src="assets/photos/lab-hero-bg.webp" alt="" width="1672" height="941" fetchpriority="high">
+  <div class="lab-glow" aria-hidden="true"></div>
+  <img class="lab-teacher" src="assets/photos/teacher-silhouette.svg" alt="Жасыл ерітіндісі бар сынауық ұстаған химия мұғалімінің силуэті" width="1086" height="1448" fetchpriority="high">
+  <div class="lab-shade" aria-hidden="true"></div>
+</div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="veil" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#home" data-go="0" aria-label="Басы">П<span>Х</span></a>
+  <nav aria-label="Бөлімдер">
+    <ul>
+      <li><a href="#about" data-go="1">Мен туралы</a></li>
+      <li><a href="#approach" data-go="2">Ұстаным</a></li>
+      <li><a href="#students" data-go="3">Жетістіктер</a></li>
+      <li><a href="#growth" data-go="4">Тәжірибе</a></li>
+      <li><a href="#final" data-go="5">Қорытынды</a></li>
+    </ul>
+  </nav>
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+</header>
+
+<main>
+<!-- 1 · HERO -->
+<section class="scene" id="home" data-h="300" aria-labelledby="h-home">
+  <div class="stick">
+    <div class="panel hero-text" data-fade="hero">
+      <p class="kicker"><span class="el" title="Калий, 19"><i>19</i>К</span>ӘСІБИ ПОРТФОЛИО</p>
+      <h1 id="h-home" class="mega"><span>БОЛАШАҚ</span><span>ХИМИЯДАН</span><span>БАС<span class="el" title="Тантал, 73"><i>73</i>Та</span>ЛАДЫ</span></h1>
+      <p class="lead">Химия пәнінің мұғалімі</p>
+      <a class="btn" href="#about" data-go="1">Портфолионы қарау <b aria-hidden="true">↓</b></a>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">Төмен айналдырыңыз<i></i></p>
+  </div>
+</section>
+
+<!-- 2 · ABOUT -->
+<section class="scene" id="about" data-h="260" aria-labelledby="h-about">
+  <div class="stick">
+    <div class="panel" data-fade>
+      <p class="kicker">01 · Тамшының ішінде</p>
+      <h2 id="h-about">Мен туралы</h2>
+      <p class="text">Мен — химия пәнінің мұғалімімін. Бұл бөлімде мұғалімнің білімі, еңбек өтілі, біліктілік санаты және оқу орны көрсетіледі.</p>
+      <ul class="facts">
+        <li><b>Жоғары</b><span>білім</span></li>
+        <li><b>N жыл</b><span>еңбек өтілі</span></li>
+        <li><b>Санат</b><span>біліктілік санаты</span></li>
+        <li><b>Мектеп</b><span>оқу орнының атауы</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · APPROACH (H2O) -->
+<section class="scene" id="approach" data-h="320" aria-labelledby="h-approach">
+  <div class="stick">
+    <div class="panel wide" data-fade>
+      <p class="kicker">02 · H₂O моделі</p>
+      <h2 id="h-approach">Менің педагогикалық ұстанымым</h2>
+      <p class="text quote">Әр оқушының бойындағы қабілетті ашу, ғылымға қызығушылығын ояту және алған білімін өмірде қолдана алатын тұлға қалыптастыру — менің басты педагогикалық ұстанымым.</p>
+      <ol class="steps" data-steps>
+        <li><b>01</b>Сұрақ қою</li>
+        <li><b>02</b>Болжам жасау</li>
+        <li><b>03</b>Тәжірибе жүргізу</li>
+        <li><b>04</b>Қорытындыны дәлелдеу</li>
+      </ol>
+      <p class="text small" data-late>Химия сабақтарында теорияны күнделікті өмірмен байланыстырып, зерттеушілік дағдыларды, сыни ойлауды және функционалдық сауаттылықты дамытуға басымдық беремін.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · STUDENTS GALLERY -->
+<section class="scene" id="students" data-h="320" aria-labelledby="h-students">
+  <div class="stick">
+    <div class="panel full" data-fade>
+      <p class="kicker">03 · Галерея</p>
+      <h2 id="h-students">Оқушылардың жетістіктері</h2>
+      <ul class="gallery" id="gallery">
+        <li><button class="doc" data-doc="st1">
+          <span class="glass"><img src="assets/students/diploma-sample.svg" alt="" loading="lazy" width="1280" height="930"></span>
+          <span class="meta"><em>2023</em><strong>Оқушы</strong>Облыстық пән олимпиадасы<b class="badge">І дәрежелі диплом</b></span></button></li>
+        <li><button class="doc" data-doc="st2">
+          <span class="glass"><img src="assets/students/diploma-sample.svg" alt="" loading="lazy" width="1280" height="930"></span>
+          <span class="meta"><em>2024</em>Олимпиаданың аудандық кезеңі, 9-сынып<b class="badge">ІІІ орын</b></span></button></li>
+        <li><button class="doc" data-doc="st3">
+          <span class="glass"><img src="assets/students/diploma-sample.svg" alt="" loading="lazy" width="1280" height="930"></span>
+          <span class="meta"><em>2025</em>Ғылыми жобалар байқауы, 10-сынып<b class="badge">ІІ орын</b></span></button></li>
+      </ul>
+      <p class="hint-sm">Дипломды үлкейту үшін басыңыз</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · GROWTH TIMELINE -->
+<section class="scene" id="growth" data-h="520" aria-labelledby="h-growth">
+  <div class="stick">
+    <div class="panel wide" data-fade>
+      <p class="kicker">04 · Жарық сызығы</p>
+      <h2 id="h-growth">Кәсіби даму және тәжірибе алмасу</h2>
+      <div class="years" id="years" role="tablist" aria-label="Жылдар"></div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · FINAL -->
+<section class="scene" id="final" data-h="220" aria-labelledby="h-final">
+  <div class="stick">
+    <div class="panel" data-fade="final">
+      <p class="kicker">05 · Зертханаға оралу</p>
+      <h2 id="h-final" class="mega2">Білімнен — зерттеуге.<br><span>Зерттеуден — болашаққа.</span></h2>
+      <p class="text">Менің кәсіби мақсатым — оқушылардың химиялық сауаттылығын қалыптастыру, тәжірибелік және зерттеушілік қабілеттерін дамыту.</p>
+      <div class="actions">
+        <a class="btn" href="#growth" data-go="4">Құжаттарды қарау <b aria-hidden="true">↓</b></a>
+        <a class="btn ghost" href="#home" data-go="0">Басына оралу <b aria-hidden="true">↑</b></a>
+      </div>
+    </div>
+    <footer class="sign">Мұғалімнің 3D портфолиосы · үлгі</footer>
+  </div>
+</section>
+</main>
+
+<dialog id="viewer" aria-labelledby="viewer-title">
+  <div class="v-head"><h3 id="viewer-title"></h3><button class="v-close" type="button" aria-label="Жабу">×</button></div>
+  <div class="v-body"><img id="viewer-img" alt=""></div>
+  <div class="v-foot"><p id="viewer-note"></p><div class="v-pages" id="viewer-pages"></div></div>
+</dialog>
+
+<script src="main.js?v=2"></script>
+<script type="module" src="scene3d.js?v=2"></script>
+</body>
+</html>
